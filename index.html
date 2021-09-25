@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Inicio/home</title>
+</head>
+<body>
+
+    <header>
+        <section>
+            <a href="./index.html"><img class="logo" src="./media/imagenes/Logo.png" alt="Tanquesar"></a>
+            <div class="social-bar">
+                <a href="https://www.facebook.com/" class="icon icon-facebook" target="_blank"></a>
+                <a href="https://www.twitter.com/" class="icon icon-twitter" target="_blank"></a>
+                <a href="https://www.youtube.com/" class="icon icon-youtube" target="_blank"></a>
+                <a href="https://www.instagram.com/" class="icon icon-instagram" target="_blank"></a>
+                <a href="https://www.linkedin.com/" class="icon icon-linkedin2" target="_blank"></a>
+            </div>
+        </section>
+        <nav>
+                <ul>
+                    <li><a href="./index.html" class="marcado">Inicio</a></li>
+                    <li><a href="./paginas/empresa.html">Empresa</a></li>
+                    <li><a href="./paginas/clientes.html">Clientes</a></li>
+                    <li><a href="./paginas/productos.html">Productos</a></li>
+                    <li><a href="./paginas/contacto.html">Contacto</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main class="main-index">
+        <div class="container"> 
+
+            <section id="video">
+                <video class="zona-video" src="./media/videos/Tanques.mp4" controls loop>Tu navegador no es compatible <code>video</code></video>
+                <p>
+                    TanquesAr fue fundado por el Sr. Lalo Landa en 1970 en la ciudad de Mar del Plata, Buenos Aires, Argentina. Concebida desde el primer día como una empresa para empresas, siempre ha estado enfocada en la calidad y la responsabilidad, buscando constantemente la excelencia. Esta búsqueda fue la que la convirtió en una de las principales empresas de Argentina, reconocida por su tradición y trayectoria en el mercado latinoamericano. <br>
+                    TanquesAr es una empresa con 50 años de experiencia en el mercado, que a través de procesos bien estructurados y alta capacidad técnica, entrega soluciones de calidad, agregando valor a los negocios de los clientes. La transparencia es parte de nuestros valores y la aplicamos en nuestro trabajo, dando al cliente pleno acceso a las etapas de producción de sus artículos y a las pruebas antes de la entrega.<br>
+                    La excelencia de TanquesAr proviene de nuestro cuidado por las personas. Tenemos como premisa que entender a las personas es entender los negocios. Buscamos comprender los dolores de cabeza de nuestros clientes para resolverlos de manera segura y eficiente.
+                </p>
+            </section>
+
+            <section id="productos">
+                <h2 class="titulo" data-aos="zoom-in" data-aos-duration="1000" data-aos-one="true">Productos</h2>
+                <div class="zona-productos">
+                    <a href="./paginas/productos.html"><img  src="./media/imagenes/Index/Tanque 1.png"></a>
+                    <a href="./paginas/productos.html"><img  src="./media/imagenes/Index/tanque 2.jpg"></a>
+                    <a href="./paginas/productos.html"><img  src="./media/imagenes/Index/Tanque 3.jpg"></a>
+                </div> 
+            </section>
+
+            <section id="empresa">
+                <h2 class="titulo" data-aos="zoom-in" data-aos-duration="1000" data-aos-one="true">Empresa</h2> 
+                <table class="tabla-empresa">
+                    <tr>
+                        <td><img src="./media/imagenes/Index/Negocio.jpg"></td>
+                        <td><img src="./media/imagenes/Index/mision.jpg"></td>
+                        <td><img src="./media/imagenes/Index/Vision.jpg"></td>
+                    </tr>
+                    <tr>
+                        <th>Negocio</th>
+                        <th>Misión</th>
+                        <th>Visión</th>
+                    </tr>
+                    <tr>
+                        <td>Generación, transformación y almacenamiento de productos y combustibles en energía con soluciones completas e integradas.</td>
+                        <td>Ofrecer excelentes productos y soluciones innovadoras, creando relaciones sólidas y sostenibles con nuestros clientes.</td>
+                        <td>Ser reconocidos como la mejor opción por los clientes, empleados y la comunidad, por la calidad de nuestros productos, servicios y relaciones.</td>
+                    </tr>
+                </table>
+                <div id="maps">
+                    <img class="imagen-edificio" src="./media/imagenes/Index/empress.jpg">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10574.844290763105!2d-57.67243235773094!3d-38.00232602665391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d929e7a98e5f%3A0x6938ce042415c34e!2sParque%20Industrial%20Gral.%20Savio!5e0!3m2!1ses-419!2sar!4v1630356256597!5m2!1ses-419!2sar" 
+                        width="50%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <img class="logo-footer" src="./media/imagenes/Logo.png" alt="Tanquesar">
+        <h5 class="pie">Dirección: Calle 123 Ciudad Uno Argentina / Teléfono 1234567890 / Email: 
+        Tanquesar@gmail.com</h5>
+    </footer>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

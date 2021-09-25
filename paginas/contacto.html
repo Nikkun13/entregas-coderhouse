@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fonts.css">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Contacto</title>
+</head>
+<body>
+
+    <header>
+        <section>
+            <a href="../index.html"><img class="logo" src="../media/imagenes/Logo.png" alt="Tanquesar"></a>
+            <div class="social-bar">
+                <a href="https://www.facebook.com/" class="icon icon-facebook" target="_blank"></a>
+                <a href="https://www.twitter.com/" class="icon icon-twitter" target="_blank"></a>
+                <a href="https://www.youtube.com/" class="icon icon-youtube" target="_blank"></a>
+                <a href="https://www.instagram.com/" class="icon icon-instagram" target="_blank"></a>
+                <a href="https://www.linkedin.com/" class="icon icon-linkedin2" target="_blank"></a>
+            </div>
+        </section>
+        <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./empresa.html">Empresa</a></li>
+                    <li><a href="./clientes.html">Clientes</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./contacto.html" class="marcado">Contacto</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main class="main-secundario">
+        <div class="container">
+            <section class="centrado">
+                <h2 class="titulo" data-aos="zoom-in" data-aos-duration="1000" data-aos-one="true">Contacto</h2>
+                <fieldset class="formulario">
+                    <legend>Complete el formulario</legend>
+                    <form action="/action_page.php" method="POST"> 
+                        <div>
+                            <label for="name">Nombre:</label><br>
+                            <input id="name" type="text" name="name">
+                        </div>
+                        <div>
+                            <label for="surname">Apellido:</label><br>
+                            <input id="surname" type="text" name="surname">
+                        </div>
+                        <div>
+                            Hombre
+                            <input value="sexo" type="radio" name="sexo">
+                            Mujer
+                            <input value="sexo" type="radio" name="sexo">
+                        </div>
+                        <div>
+                            <select name="Opciones">
+                                <option value="1">Soltero/a</option>
+                                <option value="2">Casado/a</option>
+                                <option value="3">Divorciado/a</option>
+                                <option value="4">Viudo/a</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label><br>
+                            <input id="email" type="email" name="email">
+                        </div>
+                        <div>
+                            Acepta recibir información sobre nuestros productos
+                            <input type="checkbox" name="acepta" value="1"/>
+                        </div>
+                        <div>
+                            <textarea name="comentarios" id="comentarios" cols="30" rows="10">Comentarios...</textarea>
+                        </div>
+                        <div>
+                            <input type="reset" value="Limpiar Formulario">
+                            <input type="submit" value="Enviar Formulario">
+                        </div>
+                    </form>
+                </fieldset>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <img class="logo-footer" src="../media/imagenes/Logo.png" alt="Tanquesar">
+        <h5 class="pie">Dirección: Calle 123 Ciudad Uno Argentina / Teléfono 1234567890 / Email: 
+        Tanquesar@gmail.com</h5>
+    </footer>
+    
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
