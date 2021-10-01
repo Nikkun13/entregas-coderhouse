@@ -15,16 +15,6 @@ body {
     font-family: 'Merriweather', serif;
 }
 
-/* ---------------------------------------------------------------- MEDIA QUERY GENERAL */
-
-@media screen and (max-width: 512px) {
-    
-    html {
-        font-size: 50%;
-    }
-
-}
-
 /* ---------------------------------------------------------------- HEADER */
 
 header {
@@ -166,53 +156,6 @@ header nav ul li .marcado {
     color: beige;
 }
 
-/*--------------------------------------------------------------- MEDIA QUERY HEADER */
-
-@media screen and (max-width: 512px) {
-    
-    header section a .logo {
-        padding: 5px;
-        margin: 5px;
-        width: 300px;
-    }
-
-    .social-bar {
-        right: 0px; 
-        top: 10px; 
-        flex-direction: column;
-        align-items: flex-end; 
-    }
-
-    .icon:first-child {                             
-        border-radius: 1.5rem 0 0 0;
-    }
-    
-    .icon:last-child {
-        border-radius: 0 0 0 1.5rem;
-    }
-
-    .icon:hover {  
-        padding-top: 1.4rem; 
-        padding-right: 3.5rem; 
-        border-radius: 1.5rem 0 0 1.5rem;
-        box-shadow: 0 0 .7rem rgba( 0, 0, 0, 0.42);
-    }
-
-    header nav ul {
-        background-color: khaki;
-        border-top: 3px solid darkgoldenrod;
-    }
-
-    header nav ul li {
-        display:inline;
-    }
-
-    header nav ul li a {
-        border-bottom: 3px solid darkgoldenrod;
-    }
-
-}
-
 /* --------------------------------------------------------------- INDEX MAIN */
 
 .main-index {
@@ -343,51 +286,6 @@ header nav ul li .marcado {
     width: 50%;
 }
 
-/*------------------------------------------------------------ MEDIA QUERY MAIN-INDEX */
-
-@media screen and (max-width: 512px) {
-    
-    .main-index div #video {
-        flex-direction: column;
-    }
-
-    .main-index div #video .zona-video {
-        width: 100%;
-    }
-
-    .main-index div #video p {
-        line-height: 20px;
-        padding-left: 0px;
-    }
-
-    .main-index div #productos .zona-productos {
-        flex-direction: column;
-    }
-
-    .main-index div #productos .zona-productos img {
-       width: 70vw;
-       height: auto;
-    }
-
-    .main-index div #empresa .tabla-empresa tr td {
-       font-size: 1.1rem;
-    }
-
-    .main-index div #empresa .tabla-empresa tr td img {
-        height: 40px;
-    }
-
-    .main-index div #empresa #maps {
-        flex-direction: column;
-    }
-
-    .main-index div #empresa #maps .imagen-edificio {
-        width: 100%;
-    }
-
-}
-
-
 /* ----------------------------------------------------------- FOOTER */
 
 footer {
@@ -411,23 +309,7 @@ footer .pie {
     margin-bottom: 10px;
 }
 
-/* --------------------------------------------------- MEDIA QUERY FOOTER */
-
-@media screen and (max-width: 512px) {
-
-    footer .logo-footer {
-        width: 25%;
-    }
-
-    footer .pie {
-        font-size: 1rem;
-        letter-spacing: auto;
-    }
-
-}
-
-
-/* --------------------------------------------------- PRODUCTOS MAIN, CONTACTOS MAIN */
+/* --------------------------------------------------- PAGINAS MAIN */
 
 .main-secundario {
     min-height: 80vh;
@@ -567,4 +449,212 @@ section fieldset div {
 	font-weight: 600;
 	letter-spacing: 2px;
 	padding-bottom: 15px;
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 768PX */
+
+/*--------------------------------------------------------------- MEDIA QUERY HEADER */
+
+@media screen and (max-width: 768px) {
+    
+    header section a .logo {
+        width: 420px;
+    }
+
+}
+
+/*------------------------------------------------------------ MEDIA QUERY MAIN-INDEX */
+
+@media screen and (max-width: 768px) {
+    
+    .main-index div #video {
+        flex-direction: column;
+    }
+
+    .main-index div #video .zona-video {
+        width: 100%;
+    }
+
+    .main-index div #video p {
+        line-height: 20px;
+        padding-left: 0px;
+    }
+
+    .main-index div #productos .zona-productos {
+        flex-direction: column;
+    }
+
+    .main-index div #productos .zona-productos img {
+       width: 70vw;
+       height: auto;
+    }
+
+
+    .main-index div #empresa .tabla-empresa tr td img {
+        height: 40px;
+    }
+
+    .main-index div #empresa #maps {
+        flex-direction: column;
+    }
+
+    .main-index div #empresa #maps .imagen-edificio {
+        width: 100%;
+    }
+
+}
+
+/* -------------------------------------------------- MEDIA QUERY PRODUCTOS */
+
+@media screen and (max-width: 768px) {
+
+    .grilla-productos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grilla-servicios{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 512PX */
+
+/* ---------------------------------------------------------------- MEDIA QUERY GENERAL */
+
+@media screen and (max-width: 512px) {
+    
+    html {
+        font-size: 50%;
+    }
+
+}
+
+/*--------------------------------------------------------------- MEDIA QUERY HEADER */
+
+@media screen and (max-width: 512px) {
+    
+    header section a .logo {
+        padding: 5px;
+        margin: 5px;
+        width: 300px;
+    }
+
+    .social-bar {
+        right: 0px; 
+        top: 10px; 
+        flex-direction: column;
+        align-items: flex-end; 
+    }
+
+    .icon:first-child {                             
+        border-radius: 1.5rem 0 0 0;
+    }
+    
+    .icon:last-child {
+        border-radius: 0 0 0 1.5rem;
+    }
+
+    .icon:hover {  
+        padding-top: 1.4rem; 
+        padding-right: 3.5rem; 
+        border-radius: 1.5rem 0 0 1.5rem;
+        box-shadow: 0 0 .7rem rgba( 0, 0, 0, 0.42);
+    }
+
+    header nav ul {
+        background-color: khaki;
+        border-top: 3px solid darkgoldenrod;
+    }
+
+    header nav ul li {
+        display:inline;
+    }
+
+    header nav ul li a {
+        border-bottom: 3px solid darkgoldenrod;
+    }
+
+}
+
+/*------------------------------------------------------------ MEDIA QUERY MAIN-INDEX */
+
+@media screen and (max-width: 512px) {
+    
+    .main-index div #empresa .tabla-empresa tr td {
+       font-size: 1.1rem;
+    }
+
+}
+
+/* --------------------------------------------------- MEDIA QUERY FOOTER */
+
+@media screen and (max-width: 512px) {
+
+    footer .logo-footer {
+        width: 25%;
+    }
+
+    footer .pie {
+        font-size: 1rem;
+        letter-spacing: auto;
+    }
+
+}
+
+/* -------------------------------------------------- MEDIA QUERY CONTACTOS */
+
+@media screen and (max-width: 512px) {
+
+    .formulario { 
+        width:300px;
+    }
+
+}
+
+/* -------------------------------------------------- MEDIA QUERY PRODUCTOS */
+
+@media screen and (max-width: 512px) {
+
+    .tabla-productos { 
+        padding: 2px;
+    }
+    
+    .tabla-productos tr, td, th {
+        padding: 1px;
+        padding-left: 5px;
+        margin: 3px;
+        font-size: 1.2rem;
+    }
+    
+    .grilla-productos{
+        grid-template-columns: 1fr;
+    }
+    
+    .grilla-servicios{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 350PX */
+
+/*--------------------------------------------------------------- MEDIA QUERY HEADER */
+
+@media screen and (max-width: 350px) {
+    
+    header section a .logo {
+        width: 250px;
+    }
+
+}
+
+/* -------------------------------------------------- MEDIA QUERY CONTACTOS */
+
+@media screen and (max-width: 350px) {
+
+    .formulario { 
+        width:250px;
+    }
+
 }
