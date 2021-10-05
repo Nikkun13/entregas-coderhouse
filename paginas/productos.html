@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="../fonts.css">
     <link rel="stylesheet" href="../css/main.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -37,7 +38,7 @@
     <main class="main-secundario">
         <div class="container">
             <section class="centrado">
-                <img class="portada-productos" src="../media/imagenes/Productos/productos01.jpg" alt="prod01">
+                <img class="portada-productos img-fluid" src="../media/imagenes/Productos/productos01.jpg" alt="prod01"> <!--Agregado img-fluid-->
                 <div class="parrafo-productos">
                     <p>Los tanques de acero inoxidable son comúnmente utilizados en el sector industrial, específicamente para el proceso de almacenaje de alimentos, agua, vino, leche, químicos, jugos, refrescos, bebidas alcohólicas, como la cerveza, entre otros.</p>
                     <p>Estos recipientes son fabricados con este material por las propiedades que presenta de resistencia a la corrosión e inocuidad. Su función principal es la de almacenar líquidos, sobre todo para la elaboración de bebidas, productos lácteos, jugos, néctares, medicamentos y otros químicos.</p>  
@@ -45,16 +46,18 @@
                 </div>
                 <h3 class="titulo" data-aos="zoom-in" data-aos-duration="1000" data-aos-one="true">Características</h3><br>
             </section>
+        </div>
+        <div class="contenedor">
             <table class="tabla-productos">
-                <tr>
-                    <th>Tipos de acero inoxidable</th>
-                    <th>Beneficios</th>
-                    <th>Se usa para</th>
+                <tr class="bordes-productos">
+                    <th class="bordes-productos">Tipos de acero inoxidable</th>
+                    <th class="bordes-productos">Beneficios</th>
+                    <th class="bordes-productos">Se usa para</th>
                 </tr>
-                <tr>
-                    <td>Austenítico</td>
-                    <td>Anticorrosivo: resistente a la corroción</td>
-                    <td>
+                <tr class="bordes-productos">
+                    <td class="bordes-productos">Austenítico</td>
+                    <td class="bordes-productos">Anticorrosivo: resistente a la corroción</td>
+                    <td class="bordes-productos">
                         <ol>
                             <li>Equipos Industria Alimenticia</li>
                             <li>Equipos para industria química y petroquímica</li>
@@ -64,9 +67,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Ferrítico</td>
-                    <td>Más barato y resistente a la corroción</td>
-                    <td>
+                    <td class="bordes-productos">Ferrítico</td>
+                    <td class="bordes-productos">Más barato y resistente a la corroción</td>
+                    <td class="bordes-productos">
                         <ol>
                             <li>Electrodomésticos (cocinas, heladeras, etc.)</li>
                             <li>Mostradores frigoríficos</li>
@@ -76,9 +79,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Martensítico</td>
-                    <td>Alta dureza elevada</td>
-                    <td>
+                    <td class="bordes-productos">Martensítico</td>
+                    <td class="bordes-productos">Alta dureza elevada</td>
+                    <td class="bordes-productos">
                         <ol>
                             <li>Cuchillería e instrumentos quirúrgicos</li>
                             <li>Discos de Freno</li>
@@ -211,6 +214,9 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
 
 </body>
