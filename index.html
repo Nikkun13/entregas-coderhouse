@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="./css/main.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Inicio/home</title>
 </head>
 <body>
@@ -36,7 +35,7 @@
     </header>
 
     <main class="main-index">
-        <div class="contenedor"> 
+        <div class="container arreglo"> 
 
             <section id="video">
                 <video class="zona-video" src="./media/videos/Tanques.mp4" controls loop>Tu navegador no es compatible <code>video</code></video>
@@ -57,54 +56,58 @@
             </section>
 
             <section id="empresa">
-                <h2 class="titulo" data-aos="zoom-in" data-aos-duration="1000" data-aos-one="true">Empresa</h2> 
-
-                <!-- Reemplacé ésta tabla con la que hay escrita debajo
-                <table class="tabla-empresa">
-                    <tr>
-                        <td><img src="./media/imagenes/Index/Negocio.jpg"></td>
-                        <td><img src="./media/imagenes/Index/mision.jpg"></td>
-                        <td><img src="./media/imagenes/Index/Vision.jpg"></td>
-                    </tr>
-                    <tr>
-                        <th>Negocio</th>
-                        <th>Misión</th>
-                        <th>Visión</th>
-                    </tr>
-                    <tr>
-                        <td>Generación, transformación y almacenamiento de productos y combustibles en energía con soluciones completas e integradas.</td>
-                        <td>Ofrecer excelentes productos y soluciones innovadoras, creando relaciones sólidas y sostenibles con nuestros clientes.</td>
-                        <td>Ser reconocidos como la mejor opción por los clientes, empleados y la comunidad, por la calidad de nuestros productos, servicios y relaciones.</td>
-                    </tr>
-                </table>
-                -->
-
-                <div class="container">
-                    <div class="table-responsive pb-5">
-                        <table class="table table-light align-middle text-center table-borderless">
-                            <thead>
-                                <tr>
-                                    <td><img src="./media/imagenes/Index/Negocio.jpg"></td>
-                                    <td><img src="./media/imagenes/Index/mision.jpg"></td>
-                                    <td><img src="./media/imagenes/Index/Vision.jpg"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>Negocio</th>
-                                    <th>Misión</th>
-                                    <th>Visión</th>
-                                </tr>
-                                <tr>
-                                    <td>Generación, transformación y almacenamiento de productos y combustibles en energía con soluciones completas e integradas.</td>
-                                    <td>Ofrecer excelentes productos y soluciones innovadoras, creando relaciones sólidas y sostenibles con nuestros clientes.</td>
-                                    <td>Ser reconocidos como la mejor opción por los clientes, empleados y la comunidad, por la calidad de nuestros productos, servicios y relaciones.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <h2 class="titulo" data-aos="zoom-in" data-aos-duration="1000" data-aos-one="true">Empresa</h2>
+<!-- Aca traté de hacer la tabla con cards, pero el tamaño de las imagenes queda muy feo y no supe como arreglarlo bien, me gustaría quedara como la tabla de abajo
+                <div class="mt-5 mb-5 pt-5">
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="./media/imagenes/Index/Negocio.jpg" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Negocio</h5>
+                                <p class="card-text">Generación, transformación y almacenamiento de productos y combustibles en energía con soluciones completas e integradas.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./media/imagenes/Index/mision.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Misión</h5>
+                                <p class="card-text">Ofrecer excelentes productos y soluciones innovadoras, creando relaciones sólidas y sostenibles con nuestros clientes.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./media/imagenes/Index/Vision.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Visión</h5>
+                                <p class="card-text">Ser reconocidos como la mejor opción por los clientes, empleados y la comunidad, por la calidad de nuestros productos, servicios y relaciones.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+-->
+                <div class="table-responsive pb-5">
+                    <table class="table table-light align-middle text-center table-borderless">
+                        <thead>
+                            <tr>
+                                <td><img src="./media/imagenes/Index/Negocio.jpg"></td>
+                                <td><img src="./media/imagenes/Index/mision.jpg"></td>
+                                <td><img src="./media/imagenes/Index/Vision.jpg"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Negocio</th>
+                                <th>Misión</th>
+                                <th>Visión</th>
+                            </tr>
+                            <tr>
+                                <td>Generación, transformación y almacenamiento de productos y combustibles en energía con soluciones completas e integradas.</td>
+                                <td>Ofrecer excelentes productos y soluciones innovadoras, creando relaciones sólidas y sostenibles con nuestros clientes.</td>
+                                <td>Ser reconocidos como la mejor opción por los clientes, empleados y la comunidad, por la calidad de nuestros productos, servicios y relaciones.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
                 <div id="maps">
                     <img class="imagen-edificio" src="./media/imagenes/Index/empress.jpg">
                     <iframe 
@@ -127,6 +130,8 @@
         Tanquesar@gmail.com</h5>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
     <script>
         AOS.init();
     </script>
