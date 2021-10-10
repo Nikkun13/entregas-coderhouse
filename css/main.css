@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
 * {
   margin: 0;
@@ -45,7 +46,7 @@ header section {
           justify-content: space-between;
 }
 
-header section a .logo {
+header section .logo {
   padding: 10px;
   margin: 10px;
   width: 600px;
@@ -64,6 +65,52 @@ header section a .logo {
           animation-duration: 3s;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav ul {
+  list-style: none;
+  margin-top: 20px;
+  font-size: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  font-size: 2.4rem;
+  width: 20%;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: khaki;
+  border-bottom: 3px solid darkgoldenrod;
+  border-top: 3px solid darkgoldenrod;
+}
+
+header nav ul li a {
+  color: coral;
+  text-decoration: none;
+  display: block;
+  font-size: 2.4rem;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+header nav ul li a:hover {
+  background-color: darkgoldenrod;
+  color: beige;
+}
+
+header nav ul li .marcado {
+  background-color: darkgoldenrod;
+  color: beige;
 }
 
 @-webkit-keyframes rotar {
@@ -174,75 +221,32 @@ header section a .logo {
 }
 
 /* ----------------------------------------------------- FIN REDES SOCIALES*/
-header nav {
-  width: 100%;
-}
-
-header nav ul {
-  list-style: none;
-  margin-top: 20px;
-  font-size: 0;
-  padding: 0;
-}
-
-header nav ul li {
-  display: inline-block;
-  font-size: 2.4rem;
-  width: 20%;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: khaki;
-  border-bottom: 3px solid darkgoldenrod;
-  border-top: 3px solid darkgoldenrod;
-}
-
-header nav ul li a {
-  color: coral;
-  text-decoration: none;
-  display: block;
-  font-size: 2.4rem;
-  padding: 5px;
-  text-align: center;
-  text-transform: uppercase;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-header nav ul li a:hover {
-  background-color: darkgoldenrod;
-  color: beige;
-}
-
-header nav ul li .marcado {
-  background-color: darkgoldenrod;
-  color: beige;
-}
-
-/* --------------------------------------------------------------- INDEX MAIN */
+/* --------------------------------------------------------------- INDEX */
 .main-index {
   min-height: 80vh;
   border-bottom: 3px solid #505050;
-  /* display: flex;
-     flex-direction: row;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: white;
   background-image: url("../media/imagenes/Tramafondo.png"), -webkit-gradient(linear, right top, left top, from(#7a7a7a), color-stop(rgba(122, 122, 122, 0.5)), color-stop(rgba(122, 122, 122, 0.2)), color-stop(rgba(122, 122, 122, 0.5)), to(#7a7a7a));
   background-image: url("../media/imagenes/Tramafondo.png"), linear-gradient(to left, #7a7a7a, rgba(122, 122, 122, 0.5), rgba(122, 122, 122, 0.2), rgba(122, 122, 122, 0.5), #7a7a7a);
-  /*justify-content: space-around;
-     align-items: center;*/
-}
-
-.main-index .contenedor {
-  width: 85%;
-  max-width: 1500px;
-  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-index .arreglo {
+  /* Antes esto era un div solamente sin clase, pero me abarcaba otro div de abajo que no quería, por lo que le puse al div la clase "arreglo" para que solo me abarque al div que quería*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +257,7 @@ header nav ul li .marcado {
   width: 100%;
 }
 
-.main-index div #video {
+.main-index .arreglo #video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,19 +272,19 @@ header nav ul li .marcado {
   border: 2px solid darkslategrey;
 }
 
-.main-index div #video .zona-video {
+.main-index .arreglo #video .zona-video {
   margin: 10px;
   width: 50%;
 }
 
-.main-index div #video p {
+.main-index .arreglo #video p {
   font-size: 1.6rem;
   text-align: justify;
   line-height: 30px;
   padding-left: 20px;
 }
 
-.main-index div #productos {
+.main-index .arreglo #productos {
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,16 +301,7 @@ header nav ul li .marcado {
           align-items: center;
 }
 
-.titulo {
-  font-size: 2.4rem;
-  font-weight: bold;
-  -webkit-text-stroke: 1px black;
-  color: orangered;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.main-index div #productos .zona-productos {
+.main-index .arreglo #productos .zona-productos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,7 +319,7 @@ header nav ul li .marcado {
   border: 2px solid darkslategrey;
 }
 
-.main-index div #productos .zona-productos img {
+.main-index .arreglo #productos .zona-productos img {
   height: 20vw;
   margin: 20px;
   padding: 20px;
@@ -334,15 +329,20 @@ header nav ul li .marcado {
   transition: all 2s;
 }
 
-.main-index div #productos .zona-productos img:hover {
+.main-index .arreglo #productos .zona-productos img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.main-index div #empresa {
+.main-index .arreglo #empresa {
   margin-top: 60px;
-  /*display: flex;
-    flex-direction: column;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -353,7 +353,7 @@ header nav ul li .marcado {
   text-align: center;
 }
 
-.main-index div #empresa #maps {
+.main-index .arreglo #empresa #maps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,9 +373,18 @@ header nav ul li .marcado {
   border: 2px solid darkslategrey;
 }
 
-.main-index div #empresa #maps .imagen-edificio {
+.main-index .arreglo #empresa #maps .imagen-edificio {
   margin: 10px;
   width: 50%;
+}
+
+.titulo {
+  font-size: 2.4rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+  color: orangered;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 /* ----------------------------------------------------------- FOOTER */
@@ -410,7 +419,7 @@ footer .pie {
   margin-bottom: 10px;
 }
 
-/* --------------------------------------------------- PAGINAS MAIN */
+/* --------------------------------------------------- RESTO DE PAGINAS */
 .main-secundario {
   min-height: 80vh;
   border-bottom: 3px solid #505050;
@@ -420,20 +429,12 @@ footer .pie {
   background-color: white;
   background-image: url("../media/imagenes/Tramafondo.png"), -webkit-gradient(linear, right top, left top, from(#7a7a7a), color-stop(rgba(122, 122, 122, 0.5)), color-stop(rgba(122, 122, 122, 0.2)), color-stop(rgba(122, 122, 122, 0.5)), to(#7a7a7a));
   background-image: url("../media/imagenes/Tramafondo.png"), linear-gradient(to left, #7a7a7a, rgba(122, 122, 122, 0.5), rgba(122, 122, 122, 0.2), rgba(122, 122, 122, 0.5), #7a7a7a);
+  /* ------------------------------------------------------------ CONTACTOS */
+  /* ----------------------------------------------------------- EMPRESA */
+  /* ----------------------------------------------------------- PRODUCTOS */
 }
 
-.main-secundario .contenedor {
-  width: 85%;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-.centrado {
-  text-align: center;
-}
-
-/* ------------------------------------------------------------ CONTACTOS */
-.formulario {
+.main-secundario .formulario {
   font-size: 1.3rem;
   padding: 20px;
   width: 600px;
@@ -441,55 +442,47 @@ footer .pie {
   background-color: #d4d4d4;
 }
 
-section fieldset div {
+.main-secundario .formulario div {
   padding: 10px;
   margin-top: 10px;
 }
 
-/* ----------------------------------------------------------- EMPRESA */
-.borde-texto {
-  -webkit-text-stroke: 1px black;
-}
-
-/* ----------------------------------------------------------- CLIENTES */
-.empresa-imagen {
+.main-secundario .empresa-imagen {
   height: 180px;
 }
 
-/* ----------------------------------------------------------- PRODUCTOS */
-.portada-productos {
-  /*width: 85%;  Reemplazado con el img-fluid*/
+.main-secundario .portada-productos {
   padding-bottom: 60px;
 }
 
-.parrafo-productos {
+.main-secundario .parrafo-productos {
   background-color: #d4d4d4;
   border: 2px solid darkslategrey;
   padding: 10px;
   margin-bottom: 60px;
 }
 
-.parrafo-productos p {
+.main-secundario .parrafo-productos p {
   font-size: 1.6rem;
   text-align: justify;
   line-height: 30px;
 }
 
-.tabla-productos {
+.main-secundario .tabla-productos {
   border: 2px solid black;
   background-color: #a5d3df;
   margin: 10px auto 60px auto;
   padding: 10px;
 }
 
-.tabla-productos .bordes-productos {
+.main-secundario .tabla-productos .bordes-productos {
   border: 1px solid;
   padding: 10px;
   margin: 10px;
   font-size: 1.5rem;
 }
 
-.grilla-productos {
+.main-secundario .grilla-productos, .main-secundario .grilla-servicios {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -502,42 +495,21 @@ section fieldset div {
   margin: 20px 20px 60px 20px;
 }
 
-.grilla-productos img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: white;
-}
-
-.grilla-servicios {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-  margin: 20px;
-}
-
-.grilla-servicios img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: white;
-}
-
-.foto {
+.main-secundario .grilla-productos .foto, .main-secundario .grilla-servicios .foto {
   float: left;
   position: relative;
   overflow: hidden;
 }
 
-.foto-escondido {
+.main-secundario .grilla-productos .foto img, .main-secundario .grilla-servicios .foto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: white;
+}
+
+.main-secundario .grilla-productos .foto .foto-escondido, .main-secundario .grilla-servicios .foto .foto-escondido {
   position: absolute;
   top: 0;
   right: 0;
@@ -551,11 +523,7 @@ section fieldset div {
   transition: all .3s linear;
 }
 
-.foto:hover .foto-escondido {
-  opacity: .8;
-}
-
-.foto-escondido-informacion {
+.main-secundario .grilla-productos .foto .foto-escondido .foto-escondido-informacion, .main-secundario .grilla-servicios .foto .foto-escondido .foto-escondido-informacion {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -572,6 +540,14 @@ section fieldset div {
   padding-bottom: 15px;
 }
 
+.main-secundario .grilla-productos .foto:hover .foto-escondido, .main-secundario .grilla-servicios .foto:hover .foto-escondido {
+  opacity: .8;
+}
+
+.centrado {
+  text-align: center;
+}
+
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 768PX */
 /*--------------------------------------------------------------- MEDIA QUERY HEADER */
 @media screen and (max-width: 768px) {
@@ -582,50 +558,43 @@ section fieldset div {
 
 /*------------------------------------------------------------ MEDIA QUERY MAIN-INDEX */
 @media screen and (max-width: 768px) {
-  .main-index div #video {
+  .main-index .arreglo #video {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .main-index div #video .zona-video {
+  .main-index .arreglo #video .zona-video {
     width: 100%;
   }
-  .main-index div #video p {
+  .main-index .arreglo #video p {
     line-height: 20px;
     padding-left: 0px;
   }
-  .main-index div #productos .zona-productos {
+  .main-index .arreglo #productos .zona-productos {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .main-index div #productos .zona-productos img {
+  .main-index .arreglo #productos .zona-productos img {
     width: 70vw;
     height: auto;
   }
-  .main-index div #empresa .tabla-empresa tr td img {
-    height: 40px;
-  }
-  .main-index div #empresa #maps {
+  .main-index .arreglo #empresa #maps {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .main-index div #empresa #maps .imagen-edificio {
+  .main-index .arreglo #empresa #maps .imagen-edificio {
     width: 100%;
   }
 }
 
 /* -------------------------------------------------- MEDIA QUERY PRODUCTOS */
 @media screen and (max-width: 768px) {
-  .grilla-productos {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  .grilla-servicios {
+  .main-secundario .grilla-productos, .grilla-servicios {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
@@ -645,6 +614,16 @@ section fieldset div {
     padding: 5px;
     margin: 5px;
     width: 300px;
+  }
+  header nav ul {
+    background-color: khaki;
+    border-top: 3px solid darkgoldenrod;
+  }
+  header nav ul li {
+    display: inline;
+  }
+  header nav ul li a {
+    border-bottom: 3px solid darkgoldenrod;
   }
   .social-bar {
     right: 0px;
@@ -670,23 +649,6 @@ section fieldset div {
     -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
             box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
   }
-  header nav ul {
-    background-color: khaki;
-    border-top: 3px solid darkgoldenrod;
-  }
-  header nav ul li {
-    display: inline;
-  }
-  header nav ul li a {
-    border-bottom: 3px solid darkgoldenrod;
-  }
-}
-
-/*------------------------------------------------------------ MEDIA QUERY MAIN-INDEX */
-@media screen and (max-width: 512px) {
-  .main-index div #empresa .tabla-empresa tr td {
-    font-size: 1.1rem;
-  }
 }
 
 /* --------------------------------------------------- MEDIA QUERY FOOTER */
@@ -702,27 +664,23 @@ section fieldset div {
 
 /* -------------------------------------------------- MEDIA QUERY CONTACTOS */
 @media screen and (max-width: 512px) {
-  .formulario {
+  .main-secundario .formulario {
     width: 300px;
   }
 }
 
 /* -------------------------------------------------- MEDIA QUERY PRODUCTOS */
 @media screen and (max-width: 512px) {
-  .tabla-productos {
+  .main-secundario .tabla-productos {
     padding: 2px;
   }
-  .tabla-productos .bordes-productos {
+  .main-secundario .tabla-productos .bordes-productos {
     padding: 1px;
     padding-left: 5px;
     margin: 3px;
     font-size: 1.2rem;
   }
-  .grilla-productos {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .grilla-servicios {
+  .main-secundario .grilla-productos, .grilla-servicios {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
@@ -738,7 +696,7 @@ section fieldset div {
 
 /* -------------------------------------------------- MEDIA QUERY CONTACTOS */
 @media screen and (max-width: 350px) {
-  .formulario {
+  .main-secundario .formulario {
     width: 250px;
   }
 }
