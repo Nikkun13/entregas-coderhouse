@@ -44,6 +44,8 @@ header section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  /* ----------------------------------------------------- REDES SOCIALES*/
+  /* -------------------------------------------------- FIN REDES SOCIALES*/
 }
 
 header section .logo {
@@ -65,6 +67,66 @@ header section .logo {
           animation-duration: 3s;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+}
+
+header section .social-bar {
+  position: fixed;
+  right: 40px;
+  top: 0;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: 100;
+}
+
+header section .social-bar .icon {
+  color: white;
+  text-decoration: none;
+  padding: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+header section .social-bar .icon-facebook {
+  background: #2E406E;
+}
+
+header section .social-bar .icon-twitter {
+  background: #339DC5;
+}
+
+header section .social-bar .icon-youtube {
+  background: #E83028;
+}
+
+header section .social-bar .icon-instagram {
+  background: #3F60A5;
+}
+
+header section .social-bar .icon-linkedin2 {
+  background: #0E76A8;
+}
+
+header section .social-bar .icon:first-child {
+  border-radius: 0 0 0 1.5rem;
+}
+
+header section .social-bar .icon:last-child {
+  border-radius: 0 0 1.5rem 0;
+}
+
+header section .social-bar .icon:hover {
+  padding-top: 3.5rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
+          box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
 }
 
 header nav {
@@ -159,68 +221,6 @@ header nav ul li .marcado {
   }
 }
 
-/* ---------------------------------------------------------- REDES SOCIALES*/
-.social-bar {
-  position: fixed;
-  right: 40px;
-  top: 0;
-  font-size: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  z-index: 100;
-}
-
-.icon {
-  color: white;
-  text-decoration: none;
-  padding: 1.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-.icon-facebook {
-  background: #2E406E;
-}
-
-.icon-twitter {
-  background: #339DC5;
-}
-
-.icon-youtube {
-  background: #E83028;
-}
-
-.icon-instagram {
-  background: #3F60A5;
-}
-
-.icon-linkedin2 {
-  background: #0E76A8;
-}
-
-.icon:first-child {
-  border-radius: 0 0 0 1.5rem;
-}
-
-.icon:last-child {
-  border-radius: 0 0 1.5rem 0;
-}
-
-.icon:hover {
-  padding-top: 3.5rem;
-  border-radius: 0 0 1.5rem 1.5rem;
-  -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
-          box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
-}
-
-/* ----------------------------------------------------- FIN REDES SOCIALES*/
 /* --------------------------------------------------------------- INDEX */
 .main-index {
   min-height: 80vh;
@@ -551,7 +551,7 @@ footer .pie {
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 768PX */
 /*--------------------------------------------------------------- MEDIA QUERY HEADER */
 @media screen and (max-width: 768px) {
-  header section a .logo {
+  header section .logo {
     width: 420px;
   }
 }
@@ -610,22 +610,12 @@ footer .pie {
 
 /*--------------------------------------------------------------- MEDIA QUERY HEADER */
 @media screen and (max-width: 512px) {
-  header section a .logo {
+  header section .logo {
     padding: 5px;
     margin: 5px;
     width: 300px;
   }
-  header nav ul {
-    background-color: khaki;
-    border-top: 3px solid darkgoldenrod;
-  }
-  header nav ul li {
-    display: inline;
-  }
-  header nav ul li a {
-    border-bottom: 3px solid darkgoldenrod;
-  }
-  .social-bar {
+  header section .social-bar {
     right: 0px;
     top: 10px;
     -webkit-box-orient: vertical;
@@ -636,18 +626,28 @@ footer .pie {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  .icon:first-child {
+  header section .social-bar .icon:first-child {
     border-radius: 1.5rem 0 0 0;
   }
-  .icon:last-child {
+  header section .social-bar .icon:last-child {
     border-radius: 0 0 0 1.5rem;
   }
-  .icon:hover {
+  header section .social-bar .icon:hover {
     padding-top: 1.4rem;
     padding-right: 3.5rem;
     border-radius: 1.5rem 0 0 1.5rem;
     -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
             box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
+  }
+  header nav ul {
+    background-color: khaki;
+    border-top: 3px solid darkgoldenrod;
+  }
+  header nav ul li {
+    display: inline;
+  }
+  header nav ul li a {
+    border-bottom: 3px solid darkgoldenrod;
   }
 }
 
@@ -689,7 +689,7 @@ footer .pie {
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 350PX */
 /*--------------------------------------------------------------- MEDIA QUERY HEADER */
 @media screen and (max-width: 350px) {
-  header section a .logo {
+  header section .logo {
     width: 250px;
   }
 }
