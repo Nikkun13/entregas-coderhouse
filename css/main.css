@@ -23,7 +23,7 @@ body {
   }
 }
 
-header {
+.encabezado {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,7 +42,7 @@ header {
   background-size: cover;
 }
 
-header section {
+.encabezado__principal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,7 +57,7 @@ header section {
   /* -------------------------------------------------- FIN REDES SOCIALES*/
 }
 
-header section .logo {
+.encabezado__principal__logo {
   padding: 10px;
   margin: 10px;
   width: 600px;
@@ -78,7 +78,7 @@ header section .logo {
           animation-delay: 1s;
 }
 
-header section .social-bar {
+.encabezado__principal__redes {
   position: fixed;
   right: 40px;
   top: 0;
@@ -92,7 +92,7 @@ header section .social-bar {
   z-index: 100;
 }
 
-header section .social-bar .icon {
+.encabezado__principal__redes .icon {
   color: white;
   text-decoration: none;
   padding: 1.4rem;
@@ -103,53 +103,53 @@ header section .social-bar .icon {
   transition: all .5s;
 }
 
-header section .social-bar .icon-facebook {
+.encabezado__principal__redes .icon-facebook {
   background: #2E406E;
 }
 
-header section .social-bar .icon-twitter {
+.encabezado__principal__redes .icon-twitter {
   background: #339DC5;
 }
 
-header section .social-bar .icon-youtube {
+.encabezado__principal__redes .icon-youtube {
   background: #E83028;
 }
 
-header section .social-bar .icon-instagram {
+.encabezado__principal__redes .icon-instagram {
   background: #3F60A5;
 }
 
-header section .social-bar .icon-linkedin2 {
+.encabezado__principal__redes .icon-linkedin2 {
   background: #0E76A8;
 }
 
-header section .social-bar .icon:first-child {
+.encabezado__principal__redes .icon:first-child {
   border-radius: 0 0 0 1.5rem;
 }
 
-header section .social-bar .icon:last-child {
+.encabezado__principal__redes .icon:last-child {
   border-radius: 0 0 1.5rem 0;
 }
 
-header section .social-bar .icon:hover {
+.encabezado__principal__redes .icon:hover {
   padding-top: 3.5rem;
   border-radius: 0 0 1.5rem 1.5rem;
   -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
           box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
 }
 
-header nav {
+.encabezado__navegador {
   width: 100%;
 }
 
-header nav ul {
+.encabezado__navegador__menu {
   list-style: none;
   margin-top: 20px;
   font-size: 0;
   padding: 0;
 }
 
-header nav ul li {
+.encabezado__navegador__menu__opciones {
   display: inline-block;
   font-size: 2.4rem;
   width: 20%;
@@ -165,7 +165,7 @@ header nav ul li {
   border-top: 3px solid darkgoldenrod;
 }
 
-header nav ul li a {
+.encabezado__navegador__menu__opciones a {
   color: coral;
   text-decoration: none;
   display: block;
@@ -177,12 +177,12 @@ header nav ul li a {
   transition: all .4s ease-in-out;
 }
 
-header nav ul li a:hover {
+.encabezado__navegador__menu__opciones a:hover {
   background-color: darkgoldenrod;
   color: beige;
 }
 
-header nav ul li .marcado {
+.encabezado__navegador__menu__opciones--marcado {
   background-color: darkgoldenrod;
   color: beige;
 }
@@ -235,19 +235,19 @@ header nav ul li .marcado {
 
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 768PX */
 @media screen and (max-width: 768px) {
-  header section .logo {
+  .encabezado__principal__logo {
     width: 420px;
   }
 }
 
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 512PX */
 @media screen and (max-width: 512px) {
-  header section .logo {
+  .encabezado__principal__logo {
     padding: 5px;
     margin: 5px;
     width: 300px;
   }
-  header section .social-bar {
+  .encabezado__principal__redes {
     right: 0px;
     top: 10px;
     -webkit-box-orient: vertical;
@@ -258,34 +258,34 @@ header nav ul li .marcado {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  header section .social-bar .icon:first-child {
+  .encabezado__principal__redes .icon:first-child {
     border-radius: 1.5rem 0 0 0;
   }
-  header section .social-bar .icon:last-child {
+  .encabezado__principal__redes .icon:last-child {
     border-radius: 0 0 0 1.5rem;
   }
-  header section .social-bar .icon:hover {
+  .encabezado__principal__redes .icon:hover {
     padding-top: 1.4rem;
     padding-right: 3.5rem;
     border-radius: 1.5rem 0 0 1.5rem;
     -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
             box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.42);
   }
-  header nav ul {
+  .encabezado__navegador__menu {
     background-color: khaki;
     border-top: 3px solid darkgoldenrod;
   }
-  header nav ul li {
+  .encabezado__navegador__menu__opciones {
     display: inline;
   }
-  header nav ul li a {
+  .encabezado__navegador__menu__opciones a {
     border-bottom: 3px solid darkgoldenrod;
   }
 }
 
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 350PX */
 @media screen and (max-width: 350px) {
-  header section .logo {
+  .encabezado__principal__logo {
     width: 250px;
   }
 }
@@ -478,7 +478,7 @@ header nav ul li .marcado {
   }
 }
 
-footer {
+.pie {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,12 +498,12 @@ footer {
   background-image: linear-gradient(to top, #d4d4d4, #d4d4d4, #505050);
 }
 
-footer .logo-footer {
+.pie__logo {
   width: 8%;
   margin: 10px 0;
 }
 
-footer .pie {
+.pie__datos {
   font-size: 1.2rem;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -511,10 +511,10 @@ footer .pie {
 
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 512PX */
 @media screen and (max-width: 512px) {
-  footer .logo-footer {
+  .pie__logo {
     width: 25%;
   }
-  footer .pie {
+  .pie__datos {
     font-size: 1rem;
     letter-spacing: auto;
   }

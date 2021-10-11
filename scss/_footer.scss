@@ -4,17 +4,17 @@
     align-items: $centrado;
 }
 
-footer {
+.pie {
     display: flex;
     flex-direction: column;
     @include centrar(100%,center,center);
     background-color: rgb(212, 212, 212);
     background-image: linear-gradient(to top, rgb(212, 212, 212), rgb(212, 212, 212), rgb(80, 80, 80));
-    .logo-footer {
+    &__logo {
         width: 8%;
         margin: 10px 0;
     }
-    .pie {
+    &__datos {
         font-size: 1.2rem;
         letter-spacing: 2px;
         margin-bottom: 10px;
@@ -25,11 +25,11 @@ footer {
 
 @media screen and (max-width: 512px) {
 
-    footer {
-        .logo-footer {
+    .pie {
+        &__logo {
             width: 25%;
         }
-        .pie {
+        &__datos {
             font-size: 1rem;
             letter-spacing: auto;
         }

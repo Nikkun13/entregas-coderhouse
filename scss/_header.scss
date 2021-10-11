@@ -4,17 +4,17 @@
     align-items: $centrado;
 }
 
-header {
+.encabezado {
     display: flex;
     flex-direction: column;
     @include centrar(100%,space-around,center);
     background-color: aquamarine;
     background-image: url("../media/imagenes/FondoHeader.jpg");
     background-size: cover;
-    section {
+    &__principal {
         display: flex;
         @include centrar(100%,space-between,center);
-        .logo {
+        &__logo {
             padding: 10px;
             margin: 10px;
             width: 600px;
@@ -29,7 +29,7 @@ header {
             animation-delay: 1s;
         }
         /* ----------------------------------------------------- REDES SOCIALES*/
-        .social-bar {
+        &__redes {
             position: fixed;
             right: 40px; 
             top: 0; 
@@ -73,14 +73,14 @@ header {
         }
         /* -------------------------------------------------- FIN REDES SOCIALES*/
     }
-    nav {
+    &__navegador {
         width: 100%;
-        ul {
+        &__menu {
             list-style: none;
             margin-top: 20px;
             font-size: 0;
             padding: 0;
-            li {
+            &__opciones {
                 display:inline-block;
                 font-size: 2.4rem;
                 @include centrar(20%,center,center);
@@ -102,7 +102,7 @@ header {
                     background-color: darkgoldenrod;
                     color: beige;
                 }
-                .marcado {
+                &--marcado {
                     background-color: darkgoldenrod;
                     color: beige;
                 }
@@ -123,24 +123,27 @@ header {
 
 @media screen and (max-width: 768px) {
     
-    header section .logo {
-        width: 420px;
+    .encabezado {
+        &__principal {
+            &__logo {
+                width: 420px;
+            }
+        }
     }
-
 }
 
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 512PX */
 
 @media screen and (max-width: 512px) {
     
-    header {
-        section {
-            .logo {
+    .encabezado {
+        &__principal {
+            &__logo {
                 padding: 5px;
                 margin: 5px;
                 width: 300px;
             }
-            .social-bar {
+            &__redes {
                 right: 0px; 
                 top: 10px; 
                 flex-direction: column;
@@ -159,10 +162,10 @@ header {
                 }
             }
         } 
-        nav ul {
+        &__navegador__menu {
             background-color: khaki;
             border-top: 3px solid darkgoldenrod;
-            li {
+            &__opciones {
                 display:inline;
                 a {
                     border-bottom: 3px solid darkgoldenrod;
@@ -176,7 +179,11 @@ header {
 
 @media screen and (max-width: 350px) {
     
-    header section .logo {
-        width: 250px;
+    .encabezado {
+        &__principal {
+            &__logo {
+                width: 250px;
+            }
+        }
     }
 }
