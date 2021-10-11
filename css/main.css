@@ -184,7 +184,8 @@ body {
 
 .encabezado__navegador__menu__opciones--marcado {
   background-color: darkgoldenrod;
-  color: beige;
+  color: beige !important;
+  /*Tuve que usar un !important porque desde que le cambie las clases a metodologia BEM, no me agarraba el color de las letras, ni idea de porque, pero se arregló con esto*/
 }
 
 @-webkit-keyframes rotar {
