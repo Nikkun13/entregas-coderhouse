@@ -1,0 +1,120 @@
+@mixin centrar($ancho,$justificado,$centrado) {
+    width: $ancho;
+    justify-content: $justificado;
+    align-items: $centrado;
+}
+
+.main-index {
+    min-height: 80vh;
+    border-bottom: 3px solid  rgb(80, 80, 80);
+    display: flex;
+    flex-direction: row;
+    @include centrar(100%,space-around,center);
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: white;
+    background-image:url("../media/imagenes/Tramafondo.png"), linear-gradient(to left, rgba(122, 122, 122, 1), rgba(122, 122, 122, 0.5), rgba(122, 122, 122, 0.2),rgba(122, 122, 122, 0.5), rgba(122, 122, 122, 1));;
+    .arreglo { /* Antes esto era un div solamente sin clase, pero me abarcaba otro div de abajo que no quería, por lo que le puse al div la clase "arreglo" para que solo me abarque al div que quería*/
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .titulo {
+            font-size: 2.4rem;
+            font-weight: bold;
+            -webkit-text-stroke: 1px black;
+            color:orangered;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        #video {
+            display: flex;
+            @include centrar(100%,space-around,center);
+            background-color: rgb(212, 212, 212);
+            padding: 10px;
+            border: 2px solid darkslategrey;
+            .zona-video {
+                margin: 10px;
+                width: 50%;
+            }
+            p {
+                font-size: 1.6rem;
+                text-align: justify;
+                line-height: 30px;
+                padding-left: 20px;
+            }
+        }
+        #productos {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            @include centrar(100%,space-around,center);
+            .zona-productos {
+                display: flex;
+                flex-direction: row;
+                @include centrar(auto,space-around,center);
+                background-color: rgb(212, 212, 212);
+                padding: 10px;
+                border: 2px solid darkslategrey;
+                img {
+                    height: 20vw;
+                    margin: 20px;
+                    padding: 20px;
+                    border: 1px solid black;
+                    background-color: white;
+                    transition: all 2s;
+                }
+                img:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        #empresa {
+            @extend #productos ;
+            font-size: 1.2rem;
+            text-align: center;
+            #maps {
+                display: flex;
+                flex-direction: row;
+                @include centrar(100%,center,center);
+                background-color: rgb(212, 212, 212);
+                padding: 10px;
+                border: 2px solid darkslategrey;
+                .imagen-edificio {
+                    margin: 10px;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 768PX */
+
+@media screen and (max-width: 768px) {
+    
+    .main-index .arreglo { 
+        #video {
+            flex-direction: column;
+            .zona-video {
+                width: 100%;
+            }
+            p {
+                line-height: 20px;
+                padding-left: 0px;
+            }
+        }
+        #productos .zona-productos {
+            flex-direction: column;
+            img {
+                width: 70vw;
+                height: auto;
+             }
+        }
+        #empresa #maps {
+            flex-direction: column;
+            .imagen-edificio {
+                width: 100%;
+            }
+        }
+    }
+}

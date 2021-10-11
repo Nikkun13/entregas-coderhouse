@@ -1,0 +1,182 @@
+@mixin centrar($ancho,$justificado,$centrado) {
+    width: $ancho;
+    justify-content: $justificado;
+    align-items: $centrado;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    @include centrar(100%,space-around,center);
+    background-color: aquamarine;
+    background-image: url("../media/imagenes/FondoHeader.jpg");
+    background-size: cover;
+    section {
+        display: flex;
+        @include centrar(100%,space-between,center);
+        .logo {
+            padding: 10px;
+            margin: 10px;
+            width: 600px;
+            background-color: rgb(179, 202, 195);
+            background-image: linear-gradient(to top, aquamarine, white, aquamarine);
+            border-radius: 1.5rem;
+            border: 6px solid rgb(22, 22, 56);
+            animation-name: rotar;
+            animation-iteration-count: initial;
+            animation-timing-function: ease-in;
+            animation-duration: 3s;
+            animation-delay: 1s;
+        }
+        /* ----------------------------------------------------- REDES SOCIALES*/
+        .social-bar {
+            position: fixed;
+            right: 40px; 
+            top: 0; 
+            font-size: 3rem;
+            display: flex;
+            align-items: flex-start; 
+            z-index: 100;
+            .icon {
+                color: white;
+                text-decoration: none;
+                padding: 1.4rem;
+                display: flex;
+                transition: all .5s;
+            }
+            @each $red in facebook, twitter, youtube, instagram, linkedin2 {
+                .icon-#{$red} {
+                    @if $red == facebook {
+                        background: #2E406E;
+                    } @else if $red == twitter {
+                        background: #339DC5;
+                    } @else if $red == youtube {
+                        background: #E83028;
+                    } @else if $red == instagram {
+                        background: #3F60A5;
+                    } @else {
+                        background: #0E76A8;
+                    }
+                }
+            }
+            .icon:first-child {                             
+                border-radius: 0 0 0 1.5rem;
+            }
+            .icon:last-child {
+                border-radius: 0 0 1.5rem 0;
+            }
+            .icon:hover {          
+                padding-top: 3.5rem; 
+                border-radius: 0 0 1.5rem 1.5rem;
+                box-shadow: 0 0 .7rem rgba( 0, 0, 0, 0.42);
+            }
+        }
+        /* -------------------------------------------------- FIN REDES SOCIALES*/
+    }
+    nav {
+        width: 100%;
+        ul {
+            list-style: none;
+            margin-top: 20px;
+            font-size: 0;
+            padding: 0;
+            li {
+                display:inline-block;
+                font-size: 2.4rem;
+                @include centrar(20%,center,center);
+                position: relative;
+                background-color: khaki;
+                border-bottom: 3px solid darkgoldenrod;
+                border-top: 3px solid darkgoldenrod;
+                a {
+                    color:coral;
+                    text-decoration: none;
+                    display: block;
+                    font-size: 2.4rem;
+                    padding: 5px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    transition: all .4s ease-in-out;
+                }
+                a:hover {
+                    background-color: darkgoldenrod;
+                    color: beige;
+                }
+                .marcado {
+                    background-color: darkgoldenrod;
+                    color: beige;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotar {
+    0% { transform:rotateY(0deg);}
+    25% { transform:rotateY(90deg);}
+    50% { transform:rotateY(180deg);}
+    75% { transform:rotateY(270deg);}
+    100% { transform:rotateY(360deg);}
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 768PX */
+
+@media screen and (max-width: 768px) {
+    
+    header section .logo {
+        width: 420px;
+    }
+
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 512PX */
+
+@media screen and (max-width: 512px) {
+    
+    header {
+        section {
+            .logo {
+                padding: 5px;
+                margin: 5px;
+                width: 300px;
+            }
+            .social-bar {
+                right: 0px; 
+                top: 10px; 
+                flex-direction: column;
+                align-items: flex-end;
+                .icon:first-child {                             
+                    border-radius: 1.5rem 0 0 0;
+                }
+                .icon:last-child {
+                    border-radius: 0 0 0 1.5rem;
+                }
+                .icon:hover {  
+                    padding-top: 1.4rem; 
+                    padding-right: 3.5rem; 
+                    border-radius: 1.5rem 0 0 1.5rem;
+                    box-shadow: 0 0 .7rem rgba( 0, 0, 0, 0.42);
+                }
+            }
+        } 
+        nav ul {
+            background-color: khaki;
+            border-top: 3px solid darkgoldenrod;
+            li {
+                display:inline;
+                a {
+                    border-bottom: 3px solid darkgoldenrod;
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 350PX */
+
+@media screen and (max-width: 350px) {
+    
+    header section .logo {
+        width: 250px;
+    }
+}

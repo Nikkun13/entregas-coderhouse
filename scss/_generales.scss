@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 512PX */
+
+@media screen and (max-width: 512px) {
+    
+    html {
+        font-size: 50%;
+    }
+}

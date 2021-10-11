@@ -1,0 +1,37 @@
+@mixin centrar($ancho,$justificado,$centrado) {
+    width: $ancho;
+    justify-content: $justificado;
+    align-items: $centrado;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    @include centrar(100%,center,center);
+    background-color: rgb(212, 212, 212);
+    background-image: linear-gradient(to top, rgb(212, 212, 212), rgb(212, 212, 212), rgb(80, 80, 80));
+    .logo-footer {
+        width: 8%;
+        margin: 10px 0;
+    }
+    .pie {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+}
+
+/* ---------------------------------------------------------------- MEDIA QUERY HASTA 512PX */
+
+@media screen and (max-width: 512px) {
+
+    footer {
+        .logo-footer {
+            width: 25%;
+        }
+        .pie {
+            font-size: 1rem;
+            letter-spacing: auto;
+        }
+    }
+}
