@@ -14,7 +14,7 @@
     padding-bottom: 40px;
     background-color: white;
     background-image:url("../media/imagenes/Tramafondo.png"), linear-gradient(to left, rgba(122, 122, 122, 1), rgba(122, 122, 122, 0.5), rgba(122, 122, 122, 0.2),rgba(122, 122, 122, 0.5), rgba(122, 122, 122, 1));;
-    .arreglo { /* Antes esto era un div solamente sin clase, pero me abarcaba otro div de abajo que no quería, por lo que le puse al div la clase "arreglo" para que solo me abarque al div que quería*/
+    .arreglo { 
         display: flex;
         flex-direction: column;
         width: 100%;

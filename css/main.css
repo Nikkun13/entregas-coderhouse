@@ -99,28 +99,28 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .encabezado__principal__redes .icon-facebook {
-  background: #2E406E;
+  background: #2e406e;
 }
 
 .encabezado__principal__redes .icon-twitter {
-  background: #339DC5;
+  background: #339dc5;
 }
 
 .encabezado__principal__redes .icon-youtube {
-  background: #E83028;
+  background: #e83028;
 }
 
 .encabezado__principal__redes .icon-instagram {
-  background: #3F60A5;
+  background: #3f60a5;
 }
 
 .encabezado__principal__redes .icon-linkedin2 {
-  background: #0E76A8;
+  background: #0e76a8;
 }
 
 .encabezado__principal__redes .icon:first-child {
@@ -173,8 +173,8 @@ body {
   padding: 5px;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .encabezado__navegador__menu__opciones a:hover {
@@ -185,6 +185,7 @@ body {
 .encabezado__navegador__menu__opciones--marcado {
   background-color: darkgoldenrod;
   color: beige !important;
+  /*Tuve que usar un !important porque desde que le cambie las clases a metodologia BEM, no me agarraba el color de las letras, ni idea de porque, pero se arregló con esto*/
 }
 
 @-webkit-keyframes rotar {
@@ -238,12 +239,6 @@ body {
   .encabezado__principal__logo {
     width: 420px;
   }
-  .encabezado__navegador__menu__opciones {
-    font-size: 1.6rem;
-  }
-  .encabezado__navegador__menu__opciones a {
-    font-size: 1.6rem;
-  }
 }
 
 /* ---------------------------------------------------------------- MEDIA QUERY HASTA 512PX */
@@ -283,11 +278,9 @@ body {
   }
   .encabezado__navegador__menu__opciones {
     display: inline;
-    font-size: 2.4rem;
   }
   .encabezado__navegador__menu__opciones a {
     border-bottom: 3px solid darkgoldenrod;
-    font-size: 2.4rem;
   }
 }
 
@@ -333,17 +326,13 @@ body {
   width: 100%;
 }
 
-.main-index .arreglo .titulo, .main-index .arreglo .subtitulo {
-  font-size: 2.8rem;
+.main-index .arreglo .titulo {
+  font-size: 2.4rem;
   font-weight: bold;
   -webkit-text-stroke: 1px black;
   color: orangered;
   text-transform: uppercase;
   margin-bottom: 30px;
-}
-
-.main-index .arreglo .subtitulo {
-  font-size: 2.4rem;
 }
 
 .main-index .arreglo #video {
@@ -430,6 +419,7 @@ body {
 }
 
 .main-index .arreglo #empresa .card-empresa {
+  /* background-color: red; */
   border: none;
   -webkit-box-shadow: 0px 0px 10px 2px rgba(85, 85, 85, 0.434);
           box-shadow: 0px 0px 10px 2px rgba(85, 85, 85, 0.434);
@@ -582,17 +572,13 @@ body {
   /* ----------------------------------------------------------- PRODUCTOS */
 }
 
-.main-secundario .titulo, .main-secundario .main-index .arreglo .subtitulo, .main-index .arreglo .main-secundario .subtitulo, .main-secundario .subtitulo {
-  font-size: 2.8rem;
+.main-secundario .titulo {
+  font-size: 2.4rem;
   font-weight: bold;
   -webkit-text-stroke: 1px black;
   color: orangered;
   text-transform: uppercase;
   margin-bottom: 30px;
-}
-
-.main-secundario .subtitulo {
-  font-size: 2.4rem;
 }
 
 .main-secundario .centrado {
@@ -607,29 +593,9 @@ body {
   background-color: #d4d4d4;
 }
 
-.main-secundario .formulario form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.main-secundario .formulario form .etiqueta-formulario {
-  padding: 5px;
-  margin-top: 5px;
-}
-
-.main-secundario .formulario form .input-formulario {
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-.main-secundario .formulario form .opcion-formulario {
+.main-secundario .formulario div {
   padding: 10px;
-  margin: 0 10px;
+  margin-top: 10px;
 }
 
 .main-secundario .empresa-imagen {
