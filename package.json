@@ -1,0 +1,28 @@
+{
+  "name": "tanques-ar",
+  "version": "1.0.0",
+  "description": "sitio web dedicado a la venta, fabricacion y asesoramiento de tanques de acero inoxidable para la industria gastronomica",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikkun13/entregas-coderhouse.git"
+  },
+  "author": "Nicolas Arcieri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikkun13/entregas-coderhouse/issues"
+  },
+  "homepage": "https://github.com/Nikkun13/entregas-coderhouse#readme"
+}
